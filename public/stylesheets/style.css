@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  background-image: url('/expense-bg.jpg');
+  backdrop-filter: brightness(40%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 35vw;
+  background-color: hsla(210, 11%, 15%, 0.8);
+}
+
+.expense-item {
+  max-height: 28vw;
+  overflow: scroll;
+}
+
+.list-group-item {
+  background-color: hsl(0, 0%, 90%);
+}
