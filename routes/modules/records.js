@@ -23,7 +23,7 @@ router.get('/:id/edit', (req, res) => {
     .lean()
     .then(async record => {
       const category = await Category.findOne({ _id: record.categoryId }).lean()
-      return res.render('edit', { record, category: category.name })
+      return res.render('edit', { record, categoryName: category.name })
     })
     .catch(error => console.log(error))
 })
