@@ -9,7 +9,7 @@
   </div>
   <div class="row form-group align-items-center m-2 mr-3 py-3">
     <label class="col-4 h4 text-light" for="date">日期<span class="text-warning"> *</span></label>
-    <input type="date" class="form-control col-8" name="date" id="date" min="2020-01-01" max="2025-12-31" value="{{record.date}}" required />
+    <input type="date" class="form-control col-8" name="date" id="date" min="2020-01-01" max="2025-12-31" value="{{isoDateFormat record.date}}" required />
   </div>
   <div class="row form-group align-items-center m-2 mr-3 py-3">
     <label class="col-4 h4 text-light" for="category">類別<span class="text-warning"> *</span></label>

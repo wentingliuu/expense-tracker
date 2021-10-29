@@ -22,13 +22,13 @@
     {{#each records}}
     <ul class="list-group w-100">
       <li class="list-group-item d-flex px-0 my-2 border-0">
-        <div class="col-8 d-flex align-items-center">
-          <h2 class="m-0 text-info"><i class="{{ this.categoryIcon }}"></i></h2>
+        <div class="col-8 d-flex pr-0 align-items-center">
+          <h2 class="m-0 text-info" style="width: 15%;"><i class="{{ this.categoryIcon }}"></i></h2>
           <div class="flex-grow-1 ml-2 text-dark">
             <h4 class="m-0 mb-1">{{ this.name }}</h4>
-            <small class="d-block">{{ this.date }}</small>
+            <small class="d-block">{{dateDisplay this.date }}</small>
           </div>
-          <h4 class="m-0 text-dark">{{ this.amount }}</h4>
+          <h4 class="m-0 text-dark text-right">{{ this.amount }}</h4>
         </div>
         <div class="col-4 d-flex justify-content-center align-items-center">
           <a type="button" class="btn btn-success" href="/records/{{ this._id }}/edit">修改</a>
@@ -41,7 +41,7 @@
     {{/each}}
   </div>
   {{else}}
-  <div class="d-flex flex-column align-items-center mx-1 mt-3 p-5 bg-light rounded">
+  <div class="d-flex flex-column align-items-center mx-1 mt-4 p-5 bg-light rounded">
     <h2 class="p-1">無符合條件的項目</h2>
     <p class="m-0 p-1 text-center">請點選下方「新增支出」建立你的資料<br>/ 重新篩選類別</p>
   </div>
