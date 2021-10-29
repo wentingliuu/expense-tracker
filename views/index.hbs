@@ -1,6 +1,6 @@
 <section class="container rounded mt-5 py-2">
   <form action="/filter" class="row">
-    <div class="form-group col-8 my-3">
+    <div class="form-group col-8 my-3 ml-1">
       <select class="form-control form-control-sm" id="categoryFilter">
         <option selected>類別</option>
         <option value="家居物業">家居物業</option>
@@ -14,19 +14,21 @@
   <div class="row mx-1">
     <div class="col-12 bg-secondary rounded pt-3">
       <h4 class="text-light">總金額：</h4>
-      <h1 class="text-right text-warning">$<spn class="totalAmount">25260</spn></h1>
+      <h1 class="text-right text-warning">$<spn class="totalAmount">{{totalAmount}}</spn></h1>
     </div>
   </div>
+  {{#if records}}
   <div class="row mx-1 mt-3 expense-item">
+    {{#each records}}
     <ul class="list-group w-100">
       <li class="list-group-item d-flex px-0 my-2 border-0">
         <div class="col-8 d-flex align-items-center">
-          <h1 class="m-0 text-info"><i class="fas fa-utensils"></i></h1>
+          <h2 class="m-0 text-info"><i class="{{ this.categoryIcon }}"></i></h2>
           <div class="flex-grow-1 ml-2 text-dark">
-            <h4 class="m-0 mb-1">午餐</h4>
-            <small class="d-block">2019/04/23</small>
+            <h4 class="m-0 mb-1">{{ this.name }}</h4>
+            <small class="d-block">{{ this.date }}</small>
           </div>
-          <h3 class="m-0 text-dark">60</h3>
+          <h4 class="m-0 text-dark">{{ this.amount }}</h4>
         </div>
         <div class="col-4 d-flex justify-content-center align-items-center">
           <button type="button" class="btn btn-success">
@@ -38,87 +40,14 @@
         </div>
       </li>
     </ul>
-    <ul class="list-group w-100">
-      <li class="list-group-item d-flex px-0 my-2 border-0">
-        <div class="col-8 d-flex align-items-center">
-          <h1 class="m-0 text-info"><i class="fas fa-utensils"></i></h1>
-          <div class="flex-grow-1 ml-2 text-dark">
-            <h4 class="m-0 mb-1">午餐</h4>
-            <small class="d-block">2019/04/23</small>
-          </div>
-          <h3 class="m-0 text-dark">60</h3>
-        </div>
-        <div class="col-4 d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-success">
-            修改
-          </button>
-          <button type="button" class="btn btn-danger ml-2">
-            刪除
-          </button>
-        </div>
-      </li>
-    </ul>
-    <ul class="list-group w-100">
-      <li class="list-group-item d-flex px-0 my-2 border-0">
-        <div class="col-8 d-flex align-items-center">
-          <h1 class="m-0 text-info"><i class="fas fa-utensils"></i></h1>
-          <div class="flex-grow-1 ml-2 text-dark">
-            <h4 class="m-0 mb-1">午餐</h4>
-            <small class="d-block">2019/04/23</small>
-          </div>
-          <h3 class="m-0 text-dark">60</h3>
-        </div>
-        <div class="col-4 d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-success">
-            修改
-          </button>
-          <button type="button" class="btn btn-danger ml-2">
-            刪除
-          </button>
-        </div>
-      </li>
-    </ul>
-    <ul class="list-group w-100">
-      <li class="list-group-item d-flex px-0 my-2 border-0">
-        <div class="col-8 d-flex align-items-center">
-          <h1 class="m-0 text-info"><i class="fas fa-utensils"></i></h1>
-          <div class="flex-grow-1 ml-2 text-dark">
-            <h4 class="m-0 mb-1">午餐</h4>
-            <small class="d-block">2019/04/23</small>
-          </div>
-          <h3 class="m-0 text-dark">60</h3>
-        </div>
-        <div class="col-4 d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-success">
-            修改
-          </button>
-          <button type="button" class="btn btn-danger ml-2">
-            刪除
-          </button>
-        </div>
-      </li>
-    </ul>
-    <ul class="list-group w-100">
-      <li class="list-group-item d-flex px-0 my-2 border-0">
-        <div class="col-8 d-flex align-items-center">
-          <h1 class="m-0 text-info"><i class="fas fa-utensils"></i></h1>
-          <div class="flex-grow-1 ml-2 text-dark">
-            <h4 class="m-0 mb-1">午餐</h4>
-            <small class="d-block">2019/04/23</small>
-          </div>
-          <h3 class="m-0 text-dark">60</h3>
-        </div>
-        <div class="col-4 d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-success">
-            修改
-          </button>
-          <button type="button" class="btn btn-danger ml-2">
-            刪除
-          </button>
-        </div>
-      </li>
-    </ul>
+    {{/each}}
   </div>
+  {{else}}
+  <div class="d-flex flex-column align-items-center mx-1 mt-3 p-5 bg-light rounded">
+    <h2 class="p-1">無符合條件的項目</h2>
+    <p class="m-0 p-1 text-center">請點選下方「新增支出」建立你的資料<br>/ 重新篩選類別</p>
+  </div>
+  {{/if}}
   <div class="row my-3">
       <button type="button" class="btn btn-warning m-auto">新增支出</button>
   </div>
