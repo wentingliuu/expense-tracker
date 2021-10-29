@@ -1,13 +1,13 @@
 <section class="container rounded mt-5 py-2">
-  <form action="/filter" class="row">
+  <form action="/filter" class="row" id="filter" onchange="filter.submit()">
     <div class="form-group col-8 my-3 ml-1">
-      <select class="form-control form-control-sm" id="categoryFilter">
-        <option selected>類別</option>
-        <option value="家居物業">家居物業</option>
-        <option value="交通出行">交通出行</option>
-        <option value="休閒娛樂">休閒娛樂</option>
-        <option value="餐飲食品">餐飲食品</option>
-        <option value="其他">其他</option>
+      <select class="form-control form-control-sm" id="category" name="category">
+        <option value="全部" {{{isSelected category '全部' }}}>依照類別篩選</option>
+        <option value="家居物業" {{{isSelected category '家居物業' }}}>家居物業</option>
+        <option value="交通出行" {{{isSelected category '交通出行' }}}>交通出行</option>
+        <option value="休閒娛樂" {{{isSelected category '休閒娛樂' }}}>休閒娛樂</option>
+        <option value="餐飲食品" {{{isSelected category '餐飲食品' }}}>餐飲食品</option>
+        <option value="其他" {{{isSelected category '其他' }}}>其他</option>
       </select>
     </div>
   </form>
