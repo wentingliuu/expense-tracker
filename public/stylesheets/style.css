@@ -13,7 +13,7 @@ body {
 }
 
 .expense-item {
-  max-height: 28vw;
+  max-height: 45vh;
   overflow: scroll;
 }
 
