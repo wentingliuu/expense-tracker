@@ -16,6 +16,8 @@ Please register an account via email address first, or you may quick login with 
 *  **DELETE:** click the delete button to delete the expense
 *  **FILTER:** filter the expenses by category
 
+## Screenshots
+![CRUD](https://github.com/wentingliuu/expense-tracker/blob/main/public/screenshot.gif)
 
 ## Installation and Execution
 1.  Clone the files to your computer
