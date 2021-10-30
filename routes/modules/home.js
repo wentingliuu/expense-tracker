@@ -5,7 +5,7 @@ const Record = require('../../models/record')
 const Category = require('../../models/category')
 
 router.get('/', (req, res) => {
-  Record.find()
+  Record.find({ userId: req.user._id }) // modify this
     .populate('categoryId')
     .lean()
     .then(records => res.render('index', { records }))
@@ -14,9 +14,10 @@ router.get('/', (req, res) => {
 
 // filter
 router.get('/filter', async (req, res) => {
+  const userId = req.user._id
   const category = req.query.category
   const filteredCategory = (req.query.category === '全部') ? '' : await Category.findOne({ name: req.query.category }).lean()
-  const filter = (filteredCategory === '') ? {} : { categoryId: filteredCategory._id }
+  const filter = (filteredCategory === '') ? { userId } : { userId, categoryId: filteredCategory._id }
   Record.find(filter)
     .populate('categoryId')
     .lean()
