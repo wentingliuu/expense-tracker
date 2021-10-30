@@ -4,6 +4,7 @@ A project built with [Node.js](https://nodejs.org/en/), [Express.js](https://exp
 Please register an account via email address first, or you may quick login with Facebook, cause all the expenses would be only keep in your own account.
 
 🌟 To try this project, you could use the **[dummy data](https://github.com/wentingliuu/expense-tracker#dummy-user-data)** to login.  
+🌟 This project is deployed on **[HEROKU](https://morning-wave-00395.herokuapp.com/)** as well !!!
 
 ## Features
 *  **REGISTER:** sign up an account with name, email, password
