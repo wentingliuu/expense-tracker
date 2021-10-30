@@ -1,0 +1,22 @@
+<section class="container rounded mt-5 py-2">
+  <div class="row align-items-center m-2 py-3">
+    <h6 class="col-4 text-warning">*必填欄位</h6>
+    <h2 class="col-8 text-light">立即登入</h2>
+  </div>
+  <form action="/users/login" method="POST">
+    <div class="row form-group align-items-center m-2 mr-3 py-3">
+      <label class="col-4 h4 text-light" for="email">信箱<span class="text-warning"> *</span></label>
+      <input type="email" class="form-control col-8" id="email" name="email" placeholder="Enter email" required />
+    </div>
+    <div class="row form-group align-items-center m-2 mr-3 py-3">
+      <label class="col-4 h4 text-light" for="password">密碼<span class="text-warning"> *</span></label>
+      <input type="password" class="form-control col-8" id="password" name="password" placeholder="Enter password" required />
+    </div>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-info my-4 col-4">登入</button>
+    </div>
+  </form>
+  <p class="text-light ml-4">
+    還沒有帳號嗎？ <a href="/users/register" class="text-info">註冊</a>
+  </p>
+</section>

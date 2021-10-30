@@ -1,0 +1,30 @@
+<section class="container rounded mt-5 py-2">
+  <div class="row align-items-center m-2 py-3">
+    <h6 class="col-4 text-warning">*必填欄位</h6>
+    <h2 class="col-8 text-light">註冊帳號</h2>
+  </div>
+  <form action="/users/register" method="POST">
+    <div class="row form-group align-items-center m-2 mr-3 py-3">
+      <label class="col-4 h4 text-light" for="name">姓名<span class="text-warning"> *</span></label>
+      <input type="text" class="form-control col-8" id="name" name="name" placeholder="Enter name" required />
+    </div>
+    <div class="row form-group align-items-center m-2 mr-3 py-3">
+      <label class="col-4 h4 text-light" for="email">信箱<span class="text-warning"> *</span></label>
+      <input type="email" class="form-control col-8" id="email" name="email" placeholder="Enter email" required />
+    </div>
+    <div class="row form-group align-items-center m-2 mr-3 py-3">
+      <label class="col-4 h4 text-light" for="password">密碼<span class="text-warning"> *</span></label>
+      <input type="password" class="form-control col-8" id="password" name="password" placeholder="Enter password" required />
+    </div>
+    <div class="row form-group align-items-center m-2 mr-3 py-3">
+      <label class="col-4 h4 text-light" for="confirmPassword">確認密碼<span class="text-warning"> *</span></label>
+      <input type="password" class="form-control col-8" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required />
+    </div>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-info my-4 col-4">註冊</button>
+    </div>
+  </form>
+  <p class="text-light ml-4">
+    已註冊過帳號？ <a href="/users/login" class="text-info">登入</a>
+  </p>
+</section>
