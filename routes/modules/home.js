@@ -5,7 +5,7 @@ const Record = require('../../models/record')
 const Category = require('../../models/category')
 
 router.get('/', (req, res) => {
-  Record.find({ userId: req.user._id }) // modify this
+  Record.find({ userId: req.user._id })
     .populate('categoryId')
     .lean()
     .then(records => res.render('index', { records }))
