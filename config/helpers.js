@@ -10,5 +10,12 @@ module.exports = {
   },
   isoDateFormat: function (date) {
     return date.toISOString().slice(0, 10)
+  },
+  totalAmount: function (records) {
+    let totalAmount = 0
+    records.forEach(record => {
+      totalAmount += Number(record.amount)
+    })
+    return totalAmount
   }
 }

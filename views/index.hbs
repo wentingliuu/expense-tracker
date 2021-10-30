@@ -14,7 +14,7 @@
   <div class="row mx-1">
     <div class="col-12 bg-secondary rounded pt-3">
       <h4 class="text-light">總金額：</h4>
-      <h1 class="text-right text-warning">$<spn class="totalAmount">{{totalAmount}}</spn></h1>
+      <h1 class="text-right text-warning">$<spn class="totalAmount">{{totalAmount records}}</spn></h1>
     </div>
   </div>
   {{#if records}}
@@ -23,7 +23,7 @@
     <ul class="list-group w-100">
       <li class="list-group-item d-flex px-0 my-2 border-0">
         <div class="col-8 d-flex pr-0 align-items-center">
-          <h2 class="m-0 text-info" style="width: 15%;"><i class="{{ this.categoryIcon }}"></i></h2>
+          <h2 class="m-0 text-info" style="width: 15%;"><i class="{{ this.categoryId.icon }}"></i></h2>
           <div class="flex-grow-1 ml-2 text-dark">
             <h4 class="m-0 mb-1">{{ this.name }}</h4>
             <small class="d-block">{{dateDisplay this.date }}</small>
