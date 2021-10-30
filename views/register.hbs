@@ -6,19 +6,19 @@
   <form action="/users/register" method="POST">
     <div class="row form-group align-items-center m-2 mr-3 py-3">
       <label class="col-4 h4 text-light" for="name">姓名<span class="text-warning"> *</span></label>
-      <input type="text" class="form-control col-8" id="name" name="name" placeholder="Enter name" required />
+      <input type="text" class="form-control col-8" id="name" name="name" placeholder="Enter name" value="{{ name }}" required />
     </div>
     <div class="row form-group align-items-center m-2 mr-3 py-3">
       <label class="col-4 h4 text-light" for="email">信箱<span class="text-warning"> *</span></label>
-      <input type="email" class="form-control col-8" id="email" name="email" placeholder="Enter email" required />
+      <input type="email" class="form-control col-8" id="email" name="email" placeholder="Enter email" value="{{ email }}" required />
     </div>
     <div class="row form-group align-items-center m-2 mr-3 py-3">
       <label class="col-4 h4 text-light" for="password">密碼<span class="text-warning"> *</span></label>
-      <input type="password" class="form-control col-8" id="password" name="password" placeholder="Enter password" required />
+      <input type="password" class="form-control col-8" minlength="8" maxlength="16" id="password" name="password" placeholder="Enter password" value="{{ password }}" required />
     </div>
     <div class="row form-group align-items-center m-2 mr-3 py-3">
       <label class="col-4 h4 text-light" for="confirmPassword">確認密碼<span class="text-warning"> *</span></label>
-      <input type="password" class="form-control col-8" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required />
+      <input type="password" class="form-control col-8" minlength="8" maxlength="16" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" value="{{ confirmPassword }}" required />
     </div>
     <div class="row justify-content-center">
       <button type="submit" class="btn btn-info my-4 col-4">註冊</button>
