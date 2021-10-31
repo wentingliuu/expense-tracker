@@ -32,7 +32,7 @@
         </div>
         <div class="col-4 d-flex justify-content-center align-items-center">
           <a type="button" class="btn btn-success" href="/records/{{ this._id }}/edit">修改</a>
-          <form action="/records/{{ this._id }}?_method=DELETE" method="POST">
+          <form action="/records/{{ this._id }}?_method=DELETE" method="POST" onclick="return confirm('確定要刪除「{{this.name}}」？')">
             <button class="btn btn-danger ml-2" type="submit">刪除</button>
           </form>
         </div>
