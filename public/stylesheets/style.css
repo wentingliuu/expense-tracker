@@ -9,7 +9,7 @@ body {
 
 .container {
   width: 35vw;
-  background-color: hsla(210, 11%, 15%, 0.8);
+  background-color: rgba(34, 38, 42, 0.8);
 }
 
 .expense-item {
@@ -18,5 +18,11 @@ body {
 }
 
 .list-group-item {
-  background-color: hsl(0, 0%, 90%);
+  background-color: rgb(230, 230, 230);
+}
+
+.errorBlock {
+  background-color: rgba(230, 230, 230, 0.8);
+  height: 45vh;
+  flex-direction: column;
 }
