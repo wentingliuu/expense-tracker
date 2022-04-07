@@ -18,6 +18,7 @@ Please register an account via email address first, or you may quick login with 
 *  **FILTER:** filter the expenses by category
 
 ## Screenshots
+*  **CRUD** expense records
 ![CRUD](https://github.com/wentingliuu/expense-tracker/blob/main/public/screenshot.gif)
 
 ## Installation and Execution
