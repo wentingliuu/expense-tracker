@@ -6,6 +6,7 @@ Please register an account via email address first, or you may quick login with 
 🌟 To try this project, you could use the **[dummy data](https://github.com/wentingliuu/expense-tracker#dummy-user-data)** to login.  
 🌟 This project is deployed on **[HEROKU](https://morning-wave-00395.herokuapp.com/)** as well !!!
 <br>
+
 ## Features
 *  **REGISTER:** sign up an account with name, email, password
 *  **LOGIN:** sign in to review your own expenses
@@ -17,6 +18,7 @@ Please register an account via email address first, or you may quick login with 
 *  **DELETE:** click the delete button to delete the expense
 *  **FILTER:** filter the expenses by category
 <br>
+
 ## Screenshots
 *  **CRUD** expense records
 ![CRUD](https://github.com/wentingliuu/expense-tracker/blob/main/public/screenshot.gif)
@@ -57,6 +59,7 @@ npm run dev
 ```
 - While the terminal returns `Express is listening on localhost:3000`, please visit http://localhost:3000 on your browser.
 <br>
+
 ## Dummy user data
 #### After inserting the seeder, you may use the following dummy data to experience this web application.
 | Email              | Password |
@@ -64,6 +67,7 @@ npm run dev
 | user1@example.com  | 12345678 |
 | user2@example.com  | 12345678 |
 <br>
+
 ## Prerequisites
 *  [Visual Studio Code](https://code.visualstudio.com/) - development environment
 *  [Node.js](https://nodejs.org/en/) & [npm](https://www.npmjs.com/) - JavaScript runtime environment
